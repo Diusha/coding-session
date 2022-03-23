@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { store } from "./store";
 import { Provider } from "react-redux";
@@ -6,6 +6,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import App from "./App";
+
+// Start the mocking conditionally.
+if (process.env.NODE_ENV === "development") {
+  const { worker } = require("./mocks/browser");
+  worker.start();
+}
 
 ReactDOM.render(
   <React.StrictMode>

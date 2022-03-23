@@ -39,5 +39,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "msw": "^0.39.2"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
 }

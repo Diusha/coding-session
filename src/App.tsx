@@ -1,5 +1,5 @@
-import React from "react";
 import logo from "./logo.svg";
+import MocksDemo from "./MocksDemo";
 import "./App.css";
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <MocksDemo />
       </header>
     </div>
   );
