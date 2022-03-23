@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
 const MocksDemo = () => {
-  const [users, setUsers] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch("/users")
       .then((response) => response.json())
-      .then(setUsers);
+      .then(setData);
   });
 
   return (
     <>
-      {users.map((user: any) => (
+      {data.map((user: any) => (
         <div>
           {user.name}, {user.username}
         </div>
