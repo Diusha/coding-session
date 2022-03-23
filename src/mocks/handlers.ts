@@ -23,6 +23,11 @@ export const handlers = [
         username: "mike23",
         age: 30,
       },
+      {
+        name: "Kobe",
+        username: "kobe8",
+        age: 29,
+      },
     ];
 
     return res(ctx.json(dataSet));
