@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 const MocksDemo = () => {
   const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("/users")
-  //     .then((response) => response.json())
-  //     .then(setData);
-  // }, []);
+  useEffect(() => {
+    fetch("/users")
+      .then((response) => response.json())
+      .then(setData);
+  }, []);
 
   return (
     <>
