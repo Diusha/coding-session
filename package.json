@@ -6,17 +6,19 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@mswjs/data": "^0.9.2",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@reduxjs/toolkit": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "axios": "latest",
+    "msw": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "latest",
     "react-scripts": "latest",
-    "typescript": "latest",
-    "msw": "latest"
+    "typescript": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

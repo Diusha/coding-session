@@ -1,19 +1,14 @@
 // @ts-nocheck
 import { rest } from "msw";
+import { db } from "./db";
 
 export const handlers = [
-  rest.post("/login", (req, res, ctx) => {
-    const { username } = req.body;
-
-    return res(
-      ctx.json({
-        username,
-        id: "9fadc0979fda",
-        firstName: "John",
-        lastName: "Maverick",
-      })
-    );
-  }),
+  // GET /favs/:id (where "id" is your model's primary key), returns a user by ID;
+  // GET /favs, returns all favs (supports pagination);
+  // POST /favs, creates a new item;
+  // PUT /favs/:id, updates an existing item by ID;
+  // DELETE /favs/:id, deletes an existing user by ID;
+  ...db.fav.toHandlers("rest"),
 
   // Handles a GET /user request
   rest.get("/users", (req, res, ctx) => {
