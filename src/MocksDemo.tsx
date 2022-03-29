@@ -3,29 +3,13 @@ import axios from "axios";
 
 const MocksDemo = () => {
   const [data, setData] = useState([]);
-  const [refetch, setRefetch] = useState(1);
+  const [refetch, setRefetch] = useState(0);
 
   useEffect(() => {
-    fetch("/favs")
-      .then((response) => response.json())
-      .then(setData);
+    axios.get("/favs").then((r) => setData(r.data));
   }, [refetch]);
 
-  function addItem(id: string, name: string) {
-    axios.post("/favs", { id, name });
-    setRefetch(refetch + 1);
-  }
-
-  return (
-    <>
-      <button onClick={() => addItem("btc", "Bitcoin")}>Add</button>
-      {data.map((user: any) => (
-        <div>
-          {user.id}, {user.name}
-        </div>
-      ))}
-    </>
-  );
+  return <>Demo</>;
 };
 
 export default MocksDemo;
